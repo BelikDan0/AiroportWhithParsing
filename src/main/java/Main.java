@@ -9,6 +9,7 @@ public class Main {
             Flight flight =new Flight(entry.getValue());
             System.out.println("\nВылет из "+entry.getKey());
             flight.printAllFlight();
+
         }
     }
 }
