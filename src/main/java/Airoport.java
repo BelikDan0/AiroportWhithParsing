@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class Airoport {
     private String pathToHtmlCode="src/main/resources/data/mainPageAiroports.html";
-    private Map<String,String>mapAirport;
+    private HashMap<String,String>mapAirport;
     public Airoport(String url){
         mapAirport=new HashMap<>();
         parsMainPageAiroports(url);
@@ -19,10 +19,14 @@ public class Airoport {
         mapAirport.put(name,link);
     }
 
-    public void getMapAirport() {
+    public void printMapAirport() {
         for (Map.Entry<String,String >entry:mapAirport.entrySet()){
             System.out.println("\uD83E\uDD23"+entry.getKey()+"\n"+entry.getValue()+"\uD83E\uDD23");
         }
+    }
+
+    public HashMap<String, String> getMapAirport() {
+        return mapAirport;
     }
 
     public void parsMainPageAiroports(String url){
